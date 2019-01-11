@@ -1,3 +1,4 @@
+Prefix(:=<http://purl.obolibrary.org/obo/dso.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,10 +7,26 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/dso.owl>
-Import(<http://purl.obolibrary.org/obo/dso/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/dso/imports/matentzn_import.owl>)
+Import(<http://purl.obolibrary.org/obo/dso/imports/ro_import.owl>)
 Annotation(rdfs:comment "Data Science Ontology")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/DSO_00000000>))
+Declaration(Class(<http://www.purl.obolibrary.org/obo#DSO_0000001>))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/DSO_00000000> (dso)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/DSO_00000000> "dso"@en)
+
+# Class: <http://www.purl.obolibrary.org/obo#DSO_0000001> (Tool)
+
+AnnotationAssertion(rdfs:label <http://www.purl.obolibrary.org/obo#DSO_0000001> "Tool"@en)
+SubClassOf(<http://www.purl.obolibrary.org/obo#DSO_0000001> <http://purl.obolibrary.org/obo/DSO_00000000>)
+
+
 )
